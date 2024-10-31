@@ -1,0 +1,54 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "mapping.total_fields.limit": 20000
+    },
+    "analysis": {
+      "filter": {
+        "english_minimal_stem": {
+          "type": "stemmer",
+          "language": "minimal_english"
+        }
+      },
+      "analyzer": {
+        "english_stemmed": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": ["lowercase", "english_minimal_stem"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "product_id": {
+        "type": "keyword"
+      },
+      "product_title": {
+        "type": "text",
+        "analyzer": "english_stemmed"
+      },
+      "product_description": {
+        "type": "text",
+        "analyzer": "english_stemmed"
+      },
+      "product_bullet_point": {
+        "type": "text",
+        "analyzer": "english_stemmed",
+        "fielddata": true
+      },
+      "product_brand": {
+        "type": "text",
+        "analyzer": "english_stemmed",
+        "fielddata": true
+      },
+      "product_color": {
+        "type": "text",
+        "analyzer": "english_stemmed",
+        "fielddata": true
+      }
+    }
+  }
+}
