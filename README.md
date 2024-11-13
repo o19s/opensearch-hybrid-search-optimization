@@ -52,6 +52,8 @@ Open http://localhost:8888 in your browser (you might need to go for http://127.
 
 This repository packages a couple of notebooks that help you understand hybrid search in OpenSearch and provide support to find the best configuration for your application.
 
+You can find a [video walkthrough of the notebooks on YouTube](https://youtu.be/eU7Ihc61ang)
+
 ### Prepare OpenSearch
 
 To enable hybrid search queries in OpenSearch a few requirements must be met. This notebook handles the necessary steps: from enabling the ML Commons plugin to creating an ingest pipeline taking care of creating and indexing embeddings.
