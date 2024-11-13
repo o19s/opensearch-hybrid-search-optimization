@@ -139,11 +139,12 @@ After some exploration we trained several models with query, keyword search resu
 
 | Metric    | Baseline BM25 | Global Hybrid Search Optimizer | Dynamic Hybrid Search Optimizer |
 | -------- | ------- | ------- | ------- |
-| DCG  | 5.69    |     | 6.03    |
-| NDCG | 0.25    |     | 0.27    |
-| Precision    | 0.28    |     | 0.31    |
+| DCG  | 5.69    | 6.05    | *    |
+| NDCG | 0.25    |  0.27   | *    |
+| Precision    | 0.28    | 0.31    | *    |
 
 Methodolody: we used the same 4,000 queries to train and 1,000 queries to test the different approaches. 
+* Numbers for Dynamic Hybrid Search Optimizer to Follow
 
 Running on a smaller dataset (250 queries):
 
