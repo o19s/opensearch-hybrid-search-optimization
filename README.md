@@ -139,13 +139,13 @@ Of course, not all queries benefit from this search configuration. After identif
 
 After some exploration we trained several models with query, keyword search result and neural search result features (see the notebooks for more details) which enabled a more dynamic approach, predicting the neural search weight (the "neuralness") of a search query.
 
-| Metric    | Baseline BM25 | Global Hybrid Search Optimizer | Dynamic Hybrid Search Optimizer |
-| -------- | ------- | ------- | ------- |
-| DCG  | 5.69    | 6.05    | *    |
-| NDCG | 0.25    |  0.27   | *    |
-| Precision    | 0.28    | 0.31    | *    |
+| Metric    | Baseline BM25 | Global Hybrid Search Optimizer | Dynamic Hybrid Search Optimizer - Linear Model | Dynamic Hybrid Search Optimizer - Random Forest Model |
+| -------- | ------- | ------- | ------- | ------- |
+| DCG  | 5.69    | 6.05    | 5.96    | 5.98
+| NDCG | 0.25    |  0.27   | 0.27    | 0.27
+| Precision    | 0.28    | 0.31    | 0.30    | 0.31
 
-Methodolody: we used the same 4,000 queries to train and 1,000 queries to test the different approaches. 
+
 * Numbers for Dynamic Hybrid Search Optimizer to Follow
 
 Running on a smaller dataset (250 queries):
@@ -155,6 +155,8 @@ Running on a smaller dataset (250 queries):
 | DCG  | 6.03    | 6.27    | 6.11    | 6.30
 | NDCG | 0.26    | 0.28    | 0.27    | 0.30
 | Precision    | 0.30    | 0.32    | 0.31    | 0.32
+
+Methodolody: we used the same 80% split of the queries for training and 20% of the queries for testing the different approaches. 
 
 ## Applying the Notebooks to your Application
 
