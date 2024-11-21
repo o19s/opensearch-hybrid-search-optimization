@@ -1,2 +1,2 @@
-FROM opensearchproject/opensearch:2.16.0
+FROM opensearchproject/opensearch:2.18.0
 
