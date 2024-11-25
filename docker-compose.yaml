@@ -34,6 +34,24 @@ services:
     networks:
       - opensearch-net
 
+  inference:
+    container_name: inference-api
+    build:
+      context: ./inference_api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OMP_NUM_THREADS=1
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+    networks:
+      - opensearch-net
+
 networks:
   opensearch-net:
     driver: bridge
