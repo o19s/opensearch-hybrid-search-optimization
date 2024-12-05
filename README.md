@@ -54,6 +54,8 @@ This repository packages a couple of notebooks that help you understand hybrid s
 
 You can find a [video walkthrough of the notebooks on YouTube](https://youtu.be/eU7Ihc61ang)
 
+Update: The approach changed slightly after recording the video. The best approach to understand the process is to go through the notebooks yourself with the small data set.
+
 ### Prepare OpenSearch
 
 To enable hybrid search queries in OpenSearch a few requirements must be met. This notebook handles the necessary steps: from enabling the ML Commons plugin to creating an ingest pipeline taking care of creating and indexing embeddings.
@@ -82,10 +84,6 @@ Aggregated views sometimes hide specific insights. This notebook provides means 
 ### Dynamic Optimization Feature Engineering
 
 This notebook guides you through a feature engineering process to follow a dynamic way of identifying good configuration parameters for hybrid search instead of predicting a global configuration.
-
-### Generate Training Data
-
-Dedicated notebook to generate training data for the dynamic, model-based approach. Similar to the notebook identifying the best hybrid search config it executes a set of queries against several hybrid search settings and stores the results for training and test data generation.
 
 ### Run Queries with Dynamic Optimizer
 
@@ -141,10 +139,9 @@ After some exploration we trained several models with query, keyword search resu
 
 | Metric    | Baseline BM25 | Global Hybrid Search Optimizer | Dynamic Hybrid Search Optimizer - Linear Model | Dynamic Hybrid Search Optimizer - Random Forest Model |
 | -------- | ------- | ------- | ------- | ------- |
-| DCG  | 5.69    | 6.05    | 5.96    | 5.98
-| NDCG | 0.25    |  0.27   | 0.27    | 0.27
-| Precision    | 0.28    | 0.31    | 0.30    | 0.31
-
+| DCG       | 8.82    | 9.30    | 10.13   | 10.13
+| NDCG      | 0.23    | 0.25    | 0.27    | 0.27
+| Precision | 0.24    | 0.27    | 0.29    | 0.29
 
 * Numbers for Dynamic Hybrid Search Optimizer to Follow
 
@@ -152,9 +149,9 @@ Running on a smaller dataset (250 queries):
 
 | Metric    | Baseline BM25 | Global Hybrid Search Optimizer | Dynamic Hybrid Search Optimizer - Linear Model | Dynamic Hybrid Search Optimizer - Random Forest Model |
 | -------- | ------- | ------- | ------- | ------- |
-| DCG  | 6.03    | 6.27    | 6.11    | 6.30
-| NDCG | 0.26    | 0.28    | 0.27    | 0.30
-| Precision    | 0.30    | 0.32    | 0.31    | 0.32
+| DCG       | 9.65    | 9.99    | 10.92    | 10.92
+| NDCG      | 0.24    | 0.26    | 0.28    | 0.28
+| Precision | 0.27    | 0.29    | 0.32    | 0.32
 
 Methodolody: we used the same 80% split of the queries for training and 20% of the queries for testing the different approaches. 
 

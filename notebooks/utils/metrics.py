@@ -12,7 +12,7 @@ def dcg_at_10(df, k=10, position=None, **kwargs):
         position = position[:10]
 
     # Apply DCG formula
-    dcg = np.sum(2.0 ** (df['rating'] - 1) / np.log2(position + 2))
+    dcg = np.sum(((2.0 ** df['rating']) - 1) / np.log2(position + 2))
     
     return dcg
 
