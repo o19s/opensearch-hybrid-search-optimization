@@ -161,5 +161,5 @@ While the notebooks aim to provide a working example we do encourage adaption of
 What you need:
 * An OpenSearch installation with your data indexed
 * You might need to prepare some steps to enable everything necessary for hybrid search. You can find these steps in notebook 1
-* Change the cells where the notebooks interact with a locally installed OpenSearch instance to interact with your OpenSearch isntance.
+* Change the cells where the notebooks interact with a locally installed OpenSearch instance to interact with your OpenSearch instance.
 * Change the fields used in the queries and the fields used in the response that are specific to the used dataset.
