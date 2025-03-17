@@ -93,7 +93,7 @@ Evaluation notebook for the dynamic, model-based approach.
 
 * Docker to run OpenSearch and OpenSearch Dashboards
 * Python and pip
-* Dataset: the notebooks assume the ESCI dataset to be downloaded. You can change the path to where the dataset can be found in the notebooks accordingly.
+* Dataset: the notebooks assume the [ESCI dataset](https://github.com/amazon-science/esci-data) to be downloaded. You can change the path to where the dataset can be found in the notebooks accordingly.
 
 ## Experiment Results
 
