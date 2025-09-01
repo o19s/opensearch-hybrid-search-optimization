@@ -8,6 +8,7 @@ services:
       plugins.security.disabled: "true"
       logger.level: info
       OPENSEARCH_INITIAL_ADMIN_PASSWORD: SuperSecretPassword_123
+      OPENSEARCH_JAVA_OPTS: "-Xms1g -Xmx4g"
     ulimits:
       memlock:
         soft: -1
@@ -22,7 +23,7 @@ services:
       - opensearch-net
 
   opensearch_dashboards:
-    image: opensearchproject/opensearch-dashboards:2.16.0
+    image: opensearchproject/opensearch-dashboards:3.2.0
     container_name: opensearch_hybrid_search_dashboards
     ports:
       - "5601:5601"
